@@ -1,0 +1,12 @@
+<header>
+  <h1>CMS Blog Site</h1>
+  <nav>
+    {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a>
+      <button id="logout">Logout</button>
+    {{else}}
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    {{/if}}
+  </nav>
+</header>

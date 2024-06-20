@@ -1,0 +1,19 @@
+{{> header}}
+
+<main>
+  <section>
+    <h2>My Posts</h2>
+    {{#each posts}}
+      <article>
+        <h3><a href="/dashboard/edit/{{this.id}}">{{this.title}}</a></h3>
+        <p>{{format_date this.createdAt}}</p>
+        <p>{{this.content}}</p>
+      </article>
+    {{else}}
+      <p>No posts yet!</p>
+    {{/each}}
+  </section>
+  <section>
+    <a href="/dashboard/new">Create New Post</a>
+  </section>
+</main>

@@ -1,0 +1,14 @@
+{{> header}}
+
+<main>
+  <form class="edit-post-form">
+    <label for="post-title">Title</label>
+    <input type="text" id="post-title" name="post-title" value="{{post.title}}">
+    
+    <label for="post-content">Content</label>
+    <textarea id="post-content" name="post-content">{{post.content}}</textarea>
+    
+    <button type="submit">Update Post</button>
+  </form>
+  <button class="delete-post-btn">Delete Post</button>
+</main>

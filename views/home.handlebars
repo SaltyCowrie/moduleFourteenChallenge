@@ -1,0 +1,13 @@
+{{> header}}
+
+<main>
+  {{#each posts}}
+    <article>
+      <h2><a href="/post/{{this.id}}">{{this.title}}</a></h2>
+      <p>By {{this.user.username}} on {{format_date this.createdAt}}</p>
+      <p>{{this.content}}</p>
+    </article>
+  {{else}}
+    <p>No posts yet!</p>
+  {{/each}}
+</main>
